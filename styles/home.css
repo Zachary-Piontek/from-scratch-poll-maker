@@ -1,1 +1,47 @@
-/* CSS for home page (index.html) */
+main {
+    display: grid;
+}
+
+#create-poll {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.starting-poll {
+    display: grid;
+}
+
+.pull-box {
+    display: grid;
+    grid-template-areas:
+        'option-1 option-2'
+        'vote-one vote-two'
+    ;
+    justify-items: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: grid;
+}
+
+.option.one {
+    grid-area: option-1;
+}
+
+.option.two {
+    grid-area: option-2;
+}
+
+.votes.optionOne {
+    grid-area: vote-one;
+}
+
+.votes.optionTwo {
+    grid-area: vote-two;
+}

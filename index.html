@@ -15,10 +15,58 @@
 <body>
     <header>
         <img src="assets/html_css_js.png">
-        <h1>Web MVC UI</h1>
+        <h1>Poll Tracker</h1>
     </header>
 
-    <main></main>
+    <main>
+
+        <section id="create-poll">
+            <section id="starting-poll" class="hidden">
+                <div class="starting-poll">
+                    <form>
+                        <h1>Start Poll</h1>
+                        <label>
+                            Polling Question
+                            <input required name="pollQuestion">
+                        </label>
+                        <label>
+                            Option 1
+                            <input required name="option1">
+                            <label>
+                                Option 2
+                                <input required name="option2">
+                            </label>
+                            <label>
+                                <button class="btn-new-poll">Start Poll</button>
+                            </label>
+                    </form>
+                </div>
+            </section>
+            <section id="poll-tracker" class="hidden">
+                <h1>Poll Tracker</h1>
+                <div class="poll-box">
+                    <span class="option one"></span>
+                    <span class="votes optionOne">0</span>
+                    <span class="option two"></span>
+                    <span class="votes optionTwo">0</span>
+                </div>
+                <div id="poll-counter" class="hidden">
+                    <span class="option one"></span>
+                    <button class="vote optionOne">Add Vote</button>
+                    <button class="subtract optionOne">Remove Vote</button>
+                    <span class="option two"></span>
+                    <button class="vote optionTwo">Add Vote</button>
+                    <button class="subtract optionTwo">Remove Vote</button>
+                    <button class="end-poll">End Poll</button>
+                </div>
+            </section>
+        </section>
+
+        <section id="poll-results">
+            <h1>Poll Results</h1>
+            <div class="polling-end"></div>
+        </section>
+    </main>
 
     <footer>&copy;2021 Aspiring Software Developer</footer>
 
