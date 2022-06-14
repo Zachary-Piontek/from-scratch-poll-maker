@@ -21,7 +21,7 @@
     <main>
 
         <section id="polling-station">
-            <section id="starting-poll" class="hidden">
+            <section id="starting-poll">
                 <div class="starting-poll">
                     <form>
                         <h1>Start Poll</h1>
@@ -43,15 +43,18 @@
                     </form>
                 </div>
             </section>
-            <section id="poll-tracker" class="hidden">
+            <section id="poll-tracker">
                 <h1>Poll Tracker</h1>
                 <div class="poll-box">
+                    <span class="poll question">Question</span>
                     <span class="option one">o1</span>
                     <span class="votes optionOne">v1</span>
                     <span class="option two">o2</span>
                     <span class="votes optionTwo">v2</span>
                 </div>
-                <div class="poll-counter">
+            </section>
+            <section id="poll-counter">
+                <div class="polling-oversight">
                     <span class="option one">o1</span>
                     <button class="vote optionOne">Add Vote</button>
                     <button class="subtract optionOne">Remove Vote</button>
@@ -63,7 +66,7 @@
             </section>
         </section>
 
-        <section id="poll-results">
+        <section id="past-results">
             <h1>Poll Results</h1>
             <div class="polling-end"></div>
         </section>
