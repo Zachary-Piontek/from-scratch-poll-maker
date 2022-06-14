@@ -5,8 +5,11 @@ const state = {};
 export function initialize() {
     // What is the initial shape of state?
     // For example:
+    //////////------ needed for testing part of state
     // state.game = null;
     // state.pastGames = [];
+
+
 }
 // call initialize
 initialize();

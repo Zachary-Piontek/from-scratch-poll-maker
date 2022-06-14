@@ -20,7 +20,7 @@
 
     <main>
 
-        <section id="create-poll">
+        <section id="polling-station">
             <section id="starting-poll" class="hidden">
                 <div class="starting-poll">
                     <form>
@@ -32,29 +32,30 @@
                         <label>
                             Option 1
                             <input required name="option1">
-                            <label>
-                                Option 2
-                                <input required name="option2">
-                            </label>
-                            <label>
-                                <button class="btn-new-poll">Start Poll</button>
-                            </label>
+                        </label>
+                        <label>
+                            Option 2
+                            <input required name="option2">
+                        </label>
+                        <label>
+                            <button class="btn-new-poll">Start Poll</button>
+                        </label>
                     </form>
                 </div>
             </section>
             <section id="poll-tracker" class="hidden">
                 <h1>Poll Tracker</h1>
                 <div class="poll-box">
-                    <span class="option one"></span>
-                    <span class="votes optionOne">0</span>
-                    <span class="option two"></span>
-                    <span class="votes optionTwo">0</span>
+                    <span class="option one">o1</span>
+                    <span class="votes optionOne">v1</span>
+                    <span class="option two">o2</span>
+                    <span class="votes optionTwo">v2</span>
                 </div>
-                <div id="poll-counter" class="hidden">
-                    <span class="option one"></span>
+                <div class="poll-counter">
+                    <span class="option one">o1</span>
                     <button class="vote optionOne">Add Vote</button>
                     <button class="subtract optionOne">Remove Vote</button>
-                    <span class="option two"></span>
+                    <span class="option two">o2</span>
                     <button class="vote optionTwo">Add Vote</button>
                     <button class="subtract optionTwo">Remove Vote</button>
                     <button class="end-poll">End Poll</button>

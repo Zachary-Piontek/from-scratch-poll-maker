@@ -1,19 +1,35 @@
 main {
     display: grid;
+    grid-template-areas:
+        'polling-station poll-tracker'
+        'poll-results'
+    ;
 }
 
-#create-poll {
+#polling-station {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     grid-auto-rows: minmax(100px, auto);
 }
 
-.starting-poll {
+#starting-poll {
+    border: 1px solid black;
+}
+
+#poll-tracker {
+    border: 1px solid blue;
+}
+
+#poll-results {
+    border: 1px solid red;
+}
+
+div {
     display: grid;
 }
 
-.pull-box {
+.starting-poll {
     display: grid;
     grid-template-areas:
         'option-1 option-2'
@@ -22,12 +38,32 @@ main {
     justify-items: center;
 }
 
+.poll-box {
+    display: grid;
+    grid-template-areas:
+        'option-1 option-2'
+        'vote-one vote-two'
+        'subtract-vote-one subtract-vote-two'
+    ;
+    gap: 10px;
+    justify-items: center;
+}
+
+#poll-results {
+    display: grid;
+}
+
 h1 {
     text-align: center;
 }
 
 form {
     display: grid;
+    justify-items: center;
+}
+
+label {
+    display: contents;
 }
 
 .option.one {
@@ -44,4 +80,12 @@ form {
 
 .votes.optionTwo {
     grid-area: vote-two;
+}
+
+.subtract.optionOne {
+    grid-area: subtract-vote-one;
+}
+
+.subtract.optionTwo {
+    grid-area: subtract-vote-two;
 }
