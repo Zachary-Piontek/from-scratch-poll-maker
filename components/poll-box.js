@@ -15,14 +15,14 @@ export default function PollBox(props) {
     spanOne.classList.value = 'option one';
     spanOne.textContent = poll.option1.name;
     const spanTwo = document.createElement('span');
-    spanTwo.classList.value = 'votes optionOne';
+    spanTwo.classList.value = 'vote optionOne';
     spanTwo.textContent = poll.option1.vote;
 
     const spanThree = document.createElement('span');
     spanThree.classList.value = 'option two';
     spanThree.textContent = poll.option2.name;
     const spanFour = document.createElement('span');
-    spanFour.classList.value = 'votes optionTwo';
+    spanFour.classList.value = 'vote optionTwo';
     spanFour.textContent = poll.option2.vote;
 
         

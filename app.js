@@ -5,12 +5,21 @@ import createPollCounter from './components/poll-counter.js';
 import createPollTracker from './components/poll-tracker.js';
 import createStartingPoll from './components/starting-poll.js';
 //import state and dispatch functions
-import state, { newPoll } from './state.js';
+import state, { newPoll, unVote, vote } from './state.js';
 // Create each component: 
 // - pass in the root element via querySelector
 // - pass any needed handler functions as properties of an actions object 
 const pollTracker = createPollTracker(document.querySelector('#poll-tracker'));
-const pollCounter = createPollCounter(document.querySelector('#poll-counter'));
+const pollCounter = createPollCounter(document.querySelector('#poll-counter'), {
+    handleVote: (name) => {
+        vote(name);
+        display();
+    },
+    handleUnVote: (name) => {
+        unVote(name);
+        display();
+    }
+});
 const startingPoll = createStartingPoll(document.querySelector('#starting-poll'), {
     handleNewPoll: (optionOne, optionTwo) => {
         newPoll(optionOne, optionTwo);

@@ -33,29 +33,29 @@ export default state;
 
 // export dispatch functions that modify state
 
-export function newPoll(question, optionOne, optionTwo) {
+export function newPoll(pollQuestion, optionOne, optionTwo) {
     state.poll = {
-        pollQuestion: { name: question },
+        pollQuestion: { name: pollQuestion },
         optionOne: { name: optionOne, vote: 0 },
         optionTwo: { name: optionTwo, vote: 0 }
     };
 }
 
-export function plusVote(voting) {
+export function vote(voting) {
     if (voting === 'Yes') {
-        state.poll.optionOne.vote++;
+        state.poll.optionOne.vote = vote + 1;
     }
     if (voting === 'No') {
-        state.poll.optionTwo.vote++;
+        state.poll.optionTwo.vote = vote + 1;
     }
 }
 
-export function minusVote(voting) {
-    if (voting === 'No') {
-        state.poll.optionTwo.vote--;
-    }
+export function unVote(voting) {
     if (voting === 'Yes') {
-        state.poll.optionOne.vote--;
+        state.poll.optionOne.vote = vote - 1;
     }
+    if (voting === 'No') {
+        state.poll.optionTwo.vote = vote - 1;
+    } 
 }
 

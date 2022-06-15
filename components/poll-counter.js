@@ -1,7 +1,24 @@
 
-export default function createPollCounter(root) {
+export default function createPollCounter(root, dispatch) {
+
+    const handleVote = dispatch.handleVote;
+    const handleUnVote = dispatch.handleUnVote;
 
     const [optionOneDisplay, optionTwoDisplay] = root.querySelectorAll('span');
+    const [voteUpOptionOne, voteDownOptionOne, voteUpOptionTwo, voteDownOptionTwo] = root.querySelectorAll('button');
+
+    voteUpOptionOne.addEventListener('click', () => {
+        handleVote('Yes');
+    });
+    voteUpOptionTwo.addEventListener('click', () => {
+        handleVote('Yes');
+    });
+    voteDownOptionOne.addEventListener('click', () => {
+        handleUnVote('No');
+    });
+    voteDownOptionTwo.addEventListener('click', () => {
+        handleUnVote('No');
+    });
 
     return (props) => {
 
