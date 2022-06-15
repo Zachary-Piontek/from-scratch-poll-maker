@@ -25,15 +25,15 @@ test('enter in form to get poll', (expect) => {
     });
 });
 
-test('poll votes added to options', (expect) => {
-    newPoll('question', 'brown', 'orange');
-    vote('Yes');
-    expect.deepEqual(state.poll, {
-        pollQuestion: { name: 'question' },
-        optionOne: { name: 'brown', vote: 1 },
-        optionTwo: { name: 'orange', vote: 0 }
-    });
-});
+// test('poll votes added to options', (expect) => {
+//     newPoll('question', 'brown', 'orange');
+//     vote('Yes');
+//     expect.deepEqual(state.poll, {
+//         pollQuestion: { name: 'question' },
+//         optionOne: { name: 'brown', vote: 1 },
+//         optionTwo: { name: 'orange', vote: 0 }
+//     });
+// });
 
 // test('poll votes taken away from options', (expect) => {
 //     newPoll('question', 'brown', 'orange');
