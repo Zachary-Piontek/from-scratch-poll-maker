@@ -1,5 +1,5 @@
 import state, {
-    initialize, startingPoll,
+    initialize, newPoll, plusVote, minusVote
     // import dispatch functions
 } from '../state.js';
 
@@ -12,15 +12,37 @@ test('enter in form to get poll', (expect) => {
     // what is the initial expected state?
     expect.equal(state.game, null);
     // use the action
-    startingPoll('topic', 'brown', 'orange');
+    newPoll('question', 'brown', 'orange');
     // what should the state be now?
     
 
 
     // remove this line when starting your test
     expect.deepEqual(state.poll, {
-        question: { name: 'topic' },
+        pollQuestion: { name: 'question' },
         optionOne: { name: 'brown', vote: 0 },
         optionTwo: { name: 'orange', vote: 0 }
+    });
+});
+
+test('poll votes added to options', (expect) => {
+    newPoll('question', 'brown', 'orange');
+    plusVote('Yes');
+    expect.deepEqual(state.poll, {
+        pollQuestion: { name: 'question' },
+        optionOne: { name: 'brown', vote: 1 },
+        optionTwo: { name: 'orange', vote: 0 }
+    });
+});
+
+test('poll votes taken away from options', (expect) => {
+    newPoll('question', 'brown', 'orange');
+    minusVote('No');
+    minusVote('Yes');
+    plusVote('Yes');
+    expect.deepEqual(state.poll, {
+        pollQuestion: { name: 'question' },
+        optionOne: { name: 'brown', vote: 0 },
+        optionTwo: { name: 'orange', vote: -1 }
     });
 });

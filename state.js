@@ -35,8 +35,27 @@ export default state;
 
 export function newPoll(question, optionOne, optionTwo) {
     state.poll = {
-        question: { name: question },
+        pollQuestion: { name: question },
         optionOne: { name: optionOne, vote: 0 },
         optionTwo: { name: optionTwo, vote: 0 }
     };
 }
+
+export function plusVote(voting) {
+    if (voting === 'Yes') {
+        state.poll.optionOne.vote++;
+    }
+    if (voting === 'No') {
+        state.poll.optionTwo.vote++;
+    }
+}
+
+export function minusVote(voting) {
+    if (voting === 'No') {
+        state.poll.optionTwo.vote--;
+    }
+    if (voting === 'Yes') {
+        state.poll.optionOne.vote--;
+    }
+}
+

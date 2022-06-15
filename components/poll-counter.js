@@ -6,10 +6,14 @@ export default function createPollCounter(root) {
     return (props) => {
 
         const poll = props.poll;
-        
+        if (poll === false) {
+            root.classList.add('hidden');
+            return;
+        }
+        root.classList.remove('hidden');
 
-        optionOneDisplay.textContent = poll.optionOne.name;
-        optionTwoDisplay.textContent = poll.optionTwo.name;
+        optionOneDisplay.textContent = poll.option1.name;
+        optionTwoDisplay.textContent = poll.option2.name;
 
     };
 }
