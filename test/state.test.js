@@ -1,5 +1,5 @@
 import state, {
-    initialize, newPoll, plusVote, minusVote
+    initialize, newPoll, vote, unVote
     // import dispatch functions
 } from '../state.js';
 
@@ -27,7 +27,7 @@ test('enter in form to get poll', (expect) => {
 
 test('poll votes added to options', (expect) => {
     newPoll('question', 'brown', 'orange');
-    plusVote('Yes');
+    vote('Yes');
     expect.deepEqual(state.poll, {
         pollQuestion: { name: 'question' },
         optionOne: { name: 'brown', vote: 1 },
@@ -37,9 +37,9 @@ test('poll votes added to options', (expect) => {
 
 test('poll votes taken away from options', (expect) => {
     newPoll('question', 'brown', 'orange');
-    minusVote('No');
-    minusVote('Yes');
-    plusVote('Yes');
+    unVote('No');
+    unVote('Yes');
+    vote('Yes');
     expect.deepEqual(state.poll, {
         pollQuestion: { name: 'question' },
         optionOne: { name: 'brown', vote: 0 },

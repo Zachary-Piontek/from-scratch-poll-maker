@@ -36,8 +36,8 @@ export default state;
 export function newPoll(pollQuestion, optionOne, optionTwo) {
     state.poll = {
         pollQuestion: { name: pollQuestion },
-        option1: { name: optionOne, vote: 0 },
-        option2: { name: optionTwo, vote: 0 }
+        optionOne: { name: optionOne, vote: 0 },
+        optionTwo: { name: optionTwo, vote: 0 }
     };
 }
 
