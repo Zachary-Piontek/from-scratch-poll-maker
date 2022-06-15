@@ -18,6 +18,7 @@ export function initialize() {
     */
 
     state.poll = null;
+    
     state.pastResults = [];
 }
 
@@ -33,7 +34,7 @@ export default state;
 
 // export dispatch functions that modify state
 
-export function newPoll(pollQuestion, optionOne, optionTwo) {
+export function newPoll(pollQuestion, optionOne, optionTwo) { 
     state.poll = {
         pollQuestion: { name: pollQuestion },
         optionOne: { name: optionOne, vote: 0 },

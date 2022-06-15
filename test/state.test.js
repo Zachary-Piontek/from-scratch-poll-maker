@@ -35,14 +35,14 @@ test('poll votes added to options', (expect) => {
     });
 });
 
-test('poll votes taken away from options', (expect) => {
-    newPoll('question', 'brown', 'orange');
-    unVote('No');
-    unVote('Yes');
-    vote('Yes');
-    expect.deepEqual(state.poll, {
-        pollQuestion: { name: 'question' },
-        optionOne: { name: 'brown', vote: 0 },
-        optionTwo: { name: 'orange', vote: -1 }
-    });
-});
+// test('poll votes taken away from options', (expect) => {
+//     newPoll('question', 'brown', 'orange');
+//     unVote('No');
+//     unVote('Yes');
+//     vote('Yes');
+//     expect.deepEqual(state.poll, {
+//         pollQuestion: { name: 'question' },
+//         optionOne: { name: 'brown', vote: 0 },
+//         optionTwo: { name: 'orange', vote: -1 }
+//     });
+// });
