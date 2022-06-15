@@ -33,7 +33,7 @@ export default state;
 
 // export dispatch functions that modify state
 
-export function startingPoll(question, optionOne, optionTwo) {
+export function newPoll(question, optionOne, optionTwo) {
     state.poll = {
         question: { name: question },
         optionOne: { name: optionOne, vote: 0 },

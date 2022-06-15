@@ -16,13 +16,21 @@ main {
 #starting-poll {
     border: 1px solid black;
 }
-
+#poll-counter {
+    display: grid;
+    border: 1px solid green;
+    padding-bottom: 20px;
+}
 #poll-tracker {
+    display: grid;
     border: 1px solid blue;
+    padding-bottom: 60px;
 }
 
 #past-results {
+    display: grid;
     border: 1px solid red;
+    padding-bottom: 20px;
 }
 
 div {
@@ -88,4 +96,8 @@ label {
 
 .subtract.optionTwo {
     grid-area: subtract-vote-two;
+}
+
+.hidden {
+    display: none;
 }

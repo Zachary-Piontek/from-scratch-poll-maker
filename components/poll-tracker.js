@@ -10,6 +10,15 @@ export default function createPollTracker(root) {
     return (props) => {
         
         const poll = props.poll;
+
+        if (poll === false) {
+            root.classList.add('hidden');
+            return;
+        }
+
+        root.classList.remove('hidden');
+
+        root.innerHTML = '';
         
         
  
