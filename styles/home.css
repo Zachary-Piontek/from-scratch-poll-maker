@@ -1,1 +1,118 @@
-/* CSS for home page (index.html) */
+main {
+    display: grid;
+    grid-template-areas:
+        'polling-station poll-tracker'
+        'poll-results'
+    ;
+}
+
+#polling-station {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+#starting-poll {
+    border: 1px solid black;
+}
+#poll-counter {
+    display: grid;
+    border: 1px solid green;
+    padding-bottom: 20px;
+}
+
+
+#past-results {
+    display: grid;
+    border: 1px solid red;
+    padding-bottom: 20px;
+}
+
+div {
+    display: grid;
+}
+
+.starting-poll {
+    display: grid;
+    grid-template-areas:
+        '  poll-question  '
+        'option-1 option-2'
+        'vote-one vote-two'
+    ;
+    justify-items: center;
+}
+.polling-oversight {
+    display: grid;    
+        gap: 10px;
+        justify-items: center;
+    ;
+}
+.poll-box {
+    display: grid;
+    grid-template-areas:
+        'option-1 option-2'
+        'vote-one vote-two'
+        'subtract-vote-one subtract-vote-two'
+    ;
+    gap: 10px;
+    justify-items: center;
+}
+
+#option1 {
+    display: flex;
+    flex-direction: column;
+}
+
+#option2 {
+    display: flex;
+    flex-direction: column;
+}
+
+
+#poll-results {
+    display: grid;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: grid;
+    justify-items: center;
+}
+
+label {
+    display: contents;
+}
+
+.option.one {
+    grid-area: option-1;
+}
+
+.option.two {
+    grid-area: option-2;
+}
+
+.votes.optionOne {
+    grid-area: vote-one;
+}
+
+.votes.optionTwo {
+    grid-area: vote-two;
+}
+
+.subtract.optionOne {
+    grid-area: subtract-vote-one;
+}
+
+.subtract.optionTwo {
+    grid-area: subtract-vote-two;
+}
+
+
+
+.hidden {
+    display: none;
+}

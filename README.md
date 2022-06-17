@@ -2,6 +2,8 @@
 
 🦸 🦸‍♂️ `Stop starting and start finishing.` 🏁
 
+https://zak708048.invisionapp.com/freehand/Untitled-T9kBK897T?dsid_h=49172ef346afe76eed134d41566af6d70dc6de4acbf88893582a6666499275e3&uid_h=e6af984f3346fef1f0c34eff42bbf361ce4ba1ed00769451fff0f1e4179436c6
+
 1. Limit Work in Progress (WIP)
 1. Validate each line of code before moving forward
 1. Keep it Simple Simon (KISS)
