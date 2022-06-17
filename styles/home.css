@@ -21,11 +21,7 @@ main {
     border: 1px solid green;
     padding-bottom: 20px;
 }
-#poll-tracker {
-    display: grid;
-    border: 1px solid blue;
-    padding-bottom: 60px;
-}
+
 
 #past-results {
     display: grid;
@@ -40,12 +36,18 @@ div {
 .starting-poll {
     display: grid;
     grid-template-areas:
+        '  poll-question  '
         'option-1 option-2'
         'vote-one vote-two'
     ;
     justify-items: center;
 }
-
+.polling-oversight {
+    display: grid;    
+        gap: 10px;
+        justify-items: center;
+    ;
+}
 .poll-box {
     display: grid;
     grid-template-areas:
@@ -56,6 +58,17 @@ div {
     gap: 10px;
     justify-items: center;
 }
+
+#option1 {
+    display: flex;
+    flex-direction: column;
+}
+
+#option2 {
+    display: flex;
+    flex-direction: column;
+}
+
 
 #poll-results {
     display: grid;
@@ -97,6 +110,8 @@ label {
 .subtract.optionTwo {
     grid-area: subtract-vote-two;
 }
+
+
 
 .hidden {
     display: none;

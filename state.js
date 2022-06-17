@@ -43,20 +43,20 @@ export function newPoll(pollQuestion, optionOne, optionTwo) {
 }
 
 export function vote(voting) {
-    if (voting === 'Yes') {
-        state.poll.optionOne.vote = vote + 1;
+    if (voting === 'A') {
+        state.poll.optionOne.vote++;
     }
-    if (voting === 'No') {
-        state.poll.optionTwo.vote = vote + 1;
+    if (voting === 'B') {
+        state.poll.optionTwo.vote++;
     }
 }
 
 export function unVote(voting) {
-    if (voting === 'Yes') {
-        state.poll.optionOne.vote = vote - 1;
+    if (voting === 'A') {
+        state.poll.optionOne.vote--;
     }
-    if (voting === 'No') {
-        state.poll.optionTwo.vote = vote - 1;
+    if (voting === 'B') {
+        state.poll.optionTwo.vote--;
     } 
 }
 

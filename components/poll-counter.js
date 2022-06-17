@@ -10,16 +10,16 @@ export default function createPollCounter(root, dispatch) {
     const [voteUpOptionOne, voteDownOptionOne, voteUpOptionTwo, voteDownOptionTwo, Results] = root.querySelectorAll('button');
 
     voteUpOptionOne.addEventListener('click', () => {
-        handleVote('Yes');
+        handleVote('A');
     });
     voteUpOptionTwo.addEventListener('click', () => {
-        handleVote('Yes');
+        handleVote('B');
     });
     voteDownOptionOne.addEventListener('click', () => {
-        handleUnVote('No');
+        handleUnVote('A');
     });
     voteDownOptionTwo.addEventListener('click', () => {
-        handleUnVote('No');
+        handleUnVote('B');
     });
     Results.addEventListener('click', () => {
         handlePastResults();
@@ -34,8 +34,9 @@ export default function createPollCounter(root, dispatch) {
         }
         root.classList.remove('hidden');
 
-        optionOneDisplay.textContent = poll.option1.name;
-        optionTwoDisplay.textContent = poll.option2.name;
+
+        optionOneDisplay.textContent = poll.optionOne.name;
+        optionTwoDisplay.textContent = poll.optionTwo.name;
 
     };
 }

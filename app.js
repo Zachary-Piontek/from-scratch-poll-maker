@@ -41,7 +41,7 @@ function display() {
     pollTracker({ poll: state.poll });
     pollCounter({ poll: state.poll });
     startingPoll({ poll: state.poll });
-    Polls({ polls: state.pastResults });
+    Polls({ pastResults: state.pastResults });
 
 
 }
